@@ -1,0 +1,36 @@
+#include <stdio.h>
+# define Qsize 5
+int main;
+
+void insert_rear (int q[],int item,int *r)
+{
+     if (*r == Qsize -1)
+     printf("queue over flow");
+     else
+     {
+         (*r)++ ;
+         q[*r]=item;
+     
+         
+     }
+}
+int delete_front (int q[],int *f,int *r)
+{
+      if (*f>*r)
+      printf("queue underflow");
+      else
+      return q[*f++];
+      
+      
+}
+void display (int q[],int*f,int *r)
+{
+    int i;
+    if (*f>*r)
+    printf(" queue is empty");
+    else
+    {
+        for (i=*f;i=*r;i++)
+        printf("%d",q[i]);
+    }
+}
